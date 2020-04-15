@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Rodoviária</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4 text-center">Consulte sua Viagem!!!</h1>
+              <form>
+                <div class="form-row">
+                    <div class="form-group col-md">
+                      <label>Saída</label>
+                        <select class="form-control" id="go">
+                            <option>Barra Mansa</option>
+                            <option>Volta Redonda</option>
+                            <option>Bahia</option>
+                            <option>Noxus</option>
+                            <option>Demacia</option>
+                            <option>Campo Grande</option>
+                            <option>Bom Jardim</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md">
+                      <label>Destino</label>
+                        <select class="form-control" id="back">
+                          <option>Barra Mansa</option>
+                          <option>Volta Redonda</option>
+                          <option>Bahia</option>
+                          <option>Noxus</option>
+                          <option>Demacia</option>
+                          <option>Campo Grande</option>
+                          <option>Bom Jardim</option>
+                        </select>
+                    </div>
+                </div>
+              </form>
+              <div class="form-group">
+                <button type="button"onclick="distance()" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModalCenter">Consulte</button>
+              </div>
+            </div>
+        </div>
+        <!--Modal de Informações -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Informações da sua Viagem</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p id="modal-content"></p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">OK!</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+            <h1 class="display-4 text-center">OU ANTES CONHEÇA NOSSO ITINERÁRIO</h1>
+            <table class="table table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Barra Mansa</th>
+                    <th scope="col">Volta Redonda</th>
+                    <th scope="col">Bahia</th>
+                    <th scope="col">Noxus</th>
+                    <th scope="col">Demacia</th>
+                    <th scope="col">Campo Grande</th>
+                    <th scope="col">Bom Jardim</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Barra Mansa</th>
+                    <td>-</td>
+                    <td>13 km</td>
+                    <td>500 km</td>
+                    <td>X</td>
+                    <td>69 km</td>
+                    <td>X</td>
+                    <td>28 km</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Volta Redonda</th>
+                    <td>13 km</td>
+                    <td>-</td>
+                    <td>X</td>
+                    <td>50 km</td>
+                    <td>100 km</td>
+                    <td>X</td>
+                    <td>50 km</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Bahia</th>
+                    <td>500 km</td>
+                    <td>X</td>
+                    <td>-</td>
+                    <td>20 km</td>
+                    <td>50 km</td>
+                    <td>X</td>
+                    <td>X</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Noxus</th>
+                    <td>X</td>
+                    <td>5 km</td>
+                    <td>25 km</td>
+                    <td>-</td>
+                    <td>X</td>
+                    <td>96 km</td>
+                    <td>X</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Demacia</th>
+                    <td>70 km</td>
+                    <td>100 km</td>
+                    <td>50 km</td>
+                    <td>X</td>
+                    <td>-</td>
+                    <td>85 km</td>
+                    <td>96 km</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Campo Grande</th>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>96 km</td>
+                    <td>85 km</td>
+                    <td>-</td>
+                    <td>X</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Bom Jardim</th>
+                    <td>60 km</td>
+                    <td>50 km</td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>96 km</td>
+                    <td>X</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+            </table>
+            <h1 class="display-3 text-center">BOA VIAGEM!!!</h1>
+        </div>
+        <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>
